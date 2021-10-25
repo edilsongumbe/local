@@ -1,0 +1,43 @@
+@charset "UTF_8";
+/*Relódio*/
+#rel{
+    text-align: center;
+    color:blanchedalmond;
+    font-weight: bolder;
+    font-size: 30px;
+    width:130px;
+    background-color: rgb(77,76,88);
+    border: 1px solid black;
+}
+
+/*Radio*/
+#radio{
+    margin: auto;
+    width: 500px;
+    height: 324px;
+    background: url(../_imagens/radio.png) no-repeat;
+}
+
+
+/*tv*/
+#tv{  
+    margin: auto;
+    width: 500px;
+    height: 324px;
+    background: url(../_imagens/plasma.png) no-repeat;
+}
+#mus{
+    width: 250px;
+    margin-top: 113px;
+    margin-left: 126px;
+}
+#vid{
+    margin-top: 19px;
+    margin-left:21px;
+}
+
+#interface{
+    height: 700px;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edilson Gumbe</title>
+    
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/fotos.css">
+    <script>
+        function mudaFoto (foto){
+            document.getElementById("edi").src=foto;
+        }
+    </script>
+
+</head>
+<body>  
+    <header id="cabecalho">
+        <p>
+            <span>
+                <h1>Edilson Gumbe</h1> 
+                <p id="par">Tenha o prazer de conhecer-me melhor através da visão <br> de outras pessoas.</p>            
+            </span>
+            <nav id="menu"> 
+                <h2>Menu Principal</h2>
+                <ul>
+                    <li onmouseover="mudaFoto('_imagens/edilson1.png')" onmouseout="mudaFoto('_imagens/lampada-acesa.png')"><a href="index.html">Home</a> </li>
+
+                    <li onmouseover="mudaFoto('_imagens/lampada-acesa.png')" onmouseout="mudaFoto('_imagens/lampada-acesa.png')"><a href="sobre_mim.html">Sobre mim</a> </li>
+
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/lampada-acesa.png')"><a href="fotos.html">Fotos</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/lampada-acesa.png')"><a href="multimidia.html">Multimídia</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/lampada-acesa.png')"><a href="fale-comigo.html">Fale comigo</a></li>
+                   </ul>  
+            </nav>                
+            <img id="edi" src="_imagens/lampada-acesa.png" alt="foto_do_edilson">
+        </p>
+    </header>  
+    <section id="interface">  
+        
+        <p style="color: brown;">Esta pagina esta a espera do seu depoimento sobre mem. </p>
+   
+    </section>
+        <footer id="rodape">
+            Copyright 2021 - por <a href=""></a> Edilson Gumbe |  927 117 778 <br> <br>
+           <a class="tomo" href="https://www.facebook.com/edilson.lima.794/" target="_blank"> Facebook</a>  | 
+
+           <a class="tomo" href="https://www.instagram.com/edilsongumbe/" target="_blank">Instagram</a>  |
+
+           <a class="tomo" href="https://www.youtube.com/channel/UCXKFwknfI2Fu-dFVHJT6Uqw" target="_blank"> Youtube</a>
+
+        </footer>
+</body>
+</html>

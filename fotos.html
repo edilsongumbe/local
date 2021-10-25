@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edilson Gumbe</title>
+
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/fotos.css">
+    <script>
+        function mudaFoto (foto){
+            document.getElementById("edi").src=foto;
+        }
+
+        var imgs=[]
+        var Slider
+        var imgAtual
+        var maxImg
+        var tmp
+        var tempoTroca
+        var vtempo
+        var vbarra
+
+        function preCarga(){
+            var s=1
+            for (var i=0;i<6;i++){
+                imgs[i]=new Image()
+                imgs[i].src="imgs/s"+s+".jpg"
+                s++
+            }
+        }
+        function carImg(img){
+            Slider.style.backgroundImage="url('"+imgs[img].src+"')"
+        }
+        function abrirJanela(){
+            preCarga()
+            imgAtual=0
+            maxImg=imgs.length-1
+            Slider=document.getElementById("slider")
+            vbarra=document.getElementById("dvbarra")
+            carImg(imgAtual)
+            tempoTroca=0
+            anima()    
+        }
+        window.addEventListener("load",abrirJanela)
+
+        function troca(dir){
+            tempoTroca=0
+            imgAtual+=dir
+            if(imgAtual>maxImg){
+                imgAtual=0
+            }else
+            if(imgAtual<0){
+                imgAtual=maxImg
+            }
+            carImg(imgAtual)
+        }
+        function anima(){
+            tempoTroca++
+            if(tempoTroca>=200){
+                tempoTroca=0
+                troca(1)
+            }
+            vtempo=tempoTroca/2
+            vbarra.style.width=vtempo+"%"
+            window.requestAnimationFrame(anima)
+        }
+
+    </script>
+
+</head>
+<body>  
+    <header id="cabecalho">
+        <p>
+            <span>
+                <h1>Fotos</h1> 
+                <p id="par">Algumas fotos tiradas ao longo de uma vida.</p>            
+            </span>
+            <nav id="menu"> 
+                <h2>Menu Principal</h2>
+                <ul>
+                    <li onmouseover="mudaFoto('_imagens/edilson2.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="index.html">Home</a> </li>
+
+                    <li onmouseover="mudaFoto('_imagens/lampada-acesa.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="sobre_mim.html">Sobre mim</a> </li>
+
+
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="multimidia.html">Multimídia</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fale-comigo.html">Fale comigo</a></li>
+                </ul>  
+            </nav>                
+            <img id="edi" src="_imagens/fotos.png" alt="foto_do_edilson">
+        </p>
+    </header>  
+    
+    <section id="interface"> 
+        <div id="slider">
+            <button class="btSlider" onclick="troca(-1)"> < </button>
+            <div id="dvload">
+                <div id="dvbarra"></div>
+            </div>
+            <button class="btSlider" onclick="troca(1)"> > </button>
+        </div>
+        <ul id="album-fotos">
+            <li id="foto01"><span>Em toda adversidade há um beneficio</span></li>
+            <li id="foto02"><span>Sempre que poderes recapitule</span></li>
+            <li id="foto03"><span>Nunca perca a fé</span></li>
+            <li id="foto04"><span>Evite a vaidade</span></li>
+            <li id="foto05"><span>Dedica-se aos teus sonhos</span></li>
+            <li id="foto06"><span>Adquira gosto pela arte</span></li>
+        </ul>
+    </section>
+    
+    <footer id="rodape">
+        Copyright 2021 - por <a href=""></a> Edilson Gumbe |  927 117 778 <br> <br>
+        <a class="tomo" href="https://www.facebook.com/edilson.lima.794/" target="_blank"> Facebook</a>  | 
+
+        <a class="tomo" href="https://www.instagram.com/edilsongumbe/" target="_blank">Instagram</a>  |
+
+        <a class="tomo" href="https://www.youtube.com/channel/UCXKFwknfI2Fu-dFVHJT6Uqw" target="_blank"> Youtube</a>
+
+    </footer>
+</body>
+</html>

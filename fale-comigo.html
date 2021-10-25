@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edilson Gumbe</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+    <script>
+        function mudaFoto (foto){
+            document.getElementById("edi").src=foto;
+        }
+    </script>
+
+</head>
+<body>  
+    <header id="cabecalho">
+        <p>
+            <span>
+                <h1>Multimídia</h1> 
+                <p id="par">Fale comigo, deixe a sua mensagem. </p>            
+            </span>
+            <nav id="menu"> 
+                <h2>Menu Principal</h2>
+                <ul>
+                    <li onmouseover="mudaFoto('_imagens/edilson_1.jpg')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a> </li>
+
+                    <li onmouseover="mudaFoto('_imagens/lampada-acesa.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="sobre_mim.html">Sobre mim</a> </li>
+
+
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+   
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-comigo.html">Fale comigo</a></li>
+                </ul>  
+            </nav>                
+            <img id="edi" src="_imagens/contato.png" alt="foto_do_edilson">
+        </p>
+    </header>  
+    
+    <section id="interface">
+        <form method="post" action="mailto:edilsonluanda93@gmail.com" id="fcontacto">
+            <fieldset id="cliente"> <legend>Sua Identificação</legend> 
+                <p> <label for="cnome">Nome:</label>  
+                    <input type="text" name="tnome" id="cnome" size="30" maxlength="30" placeholder="Nome Completo"> 
+                </p> 
+                <p>  <label for="csenha">Senha:</label>
+                    <input type="password" name="tsenha" id="csenha" size="10" maxlength="10">
+                </p>
+                <p>
+                    <label for="cemail">E-mail:</label>
+                    <input type="email" name="temail" id="cemail" size="40" maxlength="40">
+                </p>
+                <fieldset id="sexo"> <legend for="sexo">Sexo:</legend>  
+                   <p>
+                       <input type="radio" name="tsexo" id="cmasc" checked> 
+                       <label for="cmasc">Masculino</label> 
+                    </p>
+                   <p>
+                       <input type="radio" name="tsexo" id="cfemi"> 
+                       <label for="cfemi">Feminino</label>
+                    </p>    
+                </fieldset>
+                <p> 
+                    <label for="cnasc">Data de Nascimento:</label> 
+                    <input type="date" name="tnasc" id="cnasc">
+                </p> 
+            </fieldset>
+             
+            <fieldset id="endereco"> <legend>Endereço do Usuário</legend> 
+                <p> 
+                    <label for="crua">Logradouro:</label>
+                    <input type="text" name="trua" id="crua" size="40" maxlength="60" placeholder="Avenida, rua, travassa...">
+                </p>
+                <p>
+                    <label for="cnum">Contactos Telefónico:</label>
+                    <input type="number" name="tnum" id="cnum" min="0" max="999999999" size="9">
+                    <input type="number" name="tnum" id="cnum" min="0" max="999999999" size="9">
+                </p>  
+                <p>
+                    <label for="cesta">Município:</label>
+                    <select name="testa" id="cesta">
+                        <optgroup label="Provincia do Bengo">
+                            <option>Ambriz</option>
+                            <option>Bula Atumba</option>
+                            <option>Dande</option>
+                            <option>Dembos</option>
+                            <option>Nambuangongo</option>
+                            <option>Pango Aluquém</option>
+                        </optgroup>
+                        <optgroup label="Provincia de Cabinda">
+                            <option>Balize</option>
+                            <option>Buco Zau</option>
+                            <option>Cabinda</option>
+                            <option>Cacongo</option>
+                        </optgroup>
+                        <optgroup label="Provincia de Luanda">
+                            <option>Belas</option>
+                            <option>Cacuaco</option>
+                            <option>Cazenga</option>
+                            <option>Icolo e Bengo</option>
+                            <option>Kilamba Kiaxi</option>
+                            <option>Quiçama</option>
+                            <option>Talatona</option>
+                            <option>Viana</option>   
+                        </optgroup>
+                    </select>
+                </p> 
+                <p>
+                    <label for="ccida">Zona:</label>
+                    <input type="text" name="tcida" id="ccida" maxlength="40" size="20" placeholder="A sua zona ou Bairro" list="">
+                    <datalist id="zona">
+                        <option value="Ingombota"></option>
+                        <option value="Maianga"></option>
+                        <option value="Morro Bento"></option>
+                        <option value="Rangel"></option>
+                        <option value="Samba"></option>
+                        <option value="São Paulo"></option>
+                        <option value="Terra Nova"></option>
+                    </datalist>                
+                </p>
+
+            </fieldset>
+
+            <fieldset id="mensagem"> <legend>Mensagem do Usuário</legend>    
+               <p>
+                    <label for="curg">Grau de Urgência:</label> <br>
+                    Min<input type="range" name="turg" id="curg" min="0" max="10" step="2">Max
+                </p>
+                <p>
+                    <label for="">Mensagem:</label>
+                    <textarea name="tmsg" id="cmsg" cols="50" rows="10" placeholder="Deixe aqui a sua mensgem." maxlength="500"></textarea>
+                </p>
+            </fieldset>
+            
+            <input type="image" src="_imagens/botao-enviar.png" name="tenviar" id="tenviar">          
+        </form>
+    </section>    
+     
+    <footer id="rodape">
+        Copyright 2021 - por <a href=""></a> Edilson Gumbe |  927 117 778 <br> <br>
+        <a class="tomo" href="https://www.facebook.com/edilson.lima.794/" target="_blank"> Facebook</a>  | 
+
+        <a class="tomo" href="https://www.instagram.com/edilsongumbe/" target="_blank">Instagram</a>  |
+
+        <a class="tomo" href="https://www.youtube.com/channel/UCXKFwknfI2Fu-dFVHJT6Uqw" target="_blank"> Youtube</a>
+
+    </footer>
+</body>
+</html>
